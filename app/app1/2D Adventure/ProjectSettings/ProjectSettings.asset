@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 2c17eef25a0f4434d816e3296b2ebe82
+  productGUID: 3d12058a085a6be46aa491f4ed3cc456
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 2D_Adventure
+  productName: 2D Adventure
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -595,14 +595,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 2D_Adventure
+  metroPackageName: 2D Adventure
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 2D_Adventure
+  metroApplicationDescription: 2D Adventure
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -671,10 +671,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: db5ab460-672b-480d-aa2f-c635b1843206
+  cloudProjectId: 72f09ea9-7c1b-48a6-9880-f39c30ae98d6
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 2D_Adventure 2024-09-11_13-31-17
+  projectName: 2D Adventure
   organizationId: pikakight
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
