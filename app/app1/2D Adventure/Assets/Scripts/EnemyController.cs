@@ -6,6 +6,8 @@ public class EnemyController : MonoBehaviour
 {
     public float speed;
     public float maxMoveTime;
+    public bool verticle;
+    public int damage;
     Rigidbody2D rb;
 
     float moveTime;
@@ -29,9 +31,27 @@ public class EnemyController : MonoBehaviour
         }
 
 
-        position.x = position.x + speed * Time.deltaTime;
+        if (verticle) {
+            position.y = position.y + speed * Time.deltaTime;
+            
+        }
+
+        else
+        {
+            position.x = position.x + speed * Time.deltaTime;
+        
+        }
+
         rb.MovePosition(position);
 
         moveTime -= Time.deltaTime;
+    }
+
+    void OnCollisionEnter2D(Collision collision)
+    {
+        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+        if (player != null) {
+            player.changeHealth(damage);
+        }
     }
 }
