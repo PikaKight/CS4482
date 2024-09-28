@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public InputAction moveAction;
     public int maxHealth;
     public float timeInvincible;
+    public GameOver GameOver;
+
 
     Rigidbody2D rb;
     Vector2 move;
@@ -44,6 +46,20 @@ public class PlayerController : MonoBehaviour
             {
                 isInvincible = false;
             }
+        }
+
+
+        if (currentHealth <= 0)
+        {
+            GameOver.setup(false);
+
+            Vector2 position = transform.position;
+
+            position.x = -10;
+            position.y = 1;
+            transform.position = position;
+
+            currentHealth = maxHealth;
         }
     }
 

@@ -7,11 +7,12 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public float maxMoveTime;
     public bool verticle;
+    public bool random;
     public int damage;
     Rigidbody2D rb;
 
     float moveTime;
- 
+    float wait = 5; 
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,10 @@ public class EnemyController : MonoBehaviour
             moveTime = maxMoveTime;
         }
 
+        if (random && (wait < 0)) {
+            verticle = ! verticle;
+            wait = 5;
+        }
 
         if (verticle) {
             position.y = position.y + speed * Time.deltaTime;
@@ -45,13 +50,18 @@ public class EnemyController : MonoBehaviour
         rb.MovePosition(position);
 
         moveTime -= Time.deltaTime;
+        wait -= Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+
+        Debug.Log(player);
+
         if (player != null) {
-            player.changeHealth(damage);
+            Debug.Log("Hi");
+            player.changeHealth(damage*-1);
         }
     }
 }
